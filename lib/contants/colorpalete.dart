@@ -6,4 +6,5 @@ class Palette {
   static Color textColorBlack = const Color.fromRGBO(28, 28, 30, 1.0);
   static Color splashColour = const Color.fromRGBO(91, 83, 177, 1.0);
   static Color logoColour = const Color.fromRGBO(85, 83, 177, 1.0);
+  static Color textBlur = const Color.fromRGBO(124, 124, 124, 1.0);
 }

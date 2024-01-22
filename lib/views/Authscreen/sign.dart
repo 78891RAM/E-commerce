@@ -1,5 +1,6 @@
 import 'package:ecommerce/widgets/customtext.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../contants/colorpalete.dart';
@@ -68,7 +69,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 44,
+              height: 30,
             ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 25),
@@ -90,7 +91,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 34,
+              height: 30,
             ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 25),
@@ -112,7 +113,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 34,
+              height: 30,
             ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 25),
@@ -134,7 +135,6 @@ class SignUp extends StatelessWidget {
               children: [
                 RichText(
                   text: TextSpan(
-                    // style: DefaultTextStyle.of(context).style,
                     children: [
                       TextSpan(
                         text: "By continuing you agree to our ",
@@ -169,8 +169,9 @@ class SignUp extends StatelessWidget {
               fontSize: 18,
               fontWeight: FontWeight.w600,
               onPressed: () {
+                GoRouter.of(context).go("/location");
                 // Add your logic here for the button press
-                print("Log in button pressed!");
+                print("signup in button pressed!");
               },
             ),
             const SizedBox(
