@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // initialRoute:ChooseLocationScreen() ,
-      home: const ChooseLocationScreen(),
+      home: ChooseLocationScreen(),
 
       // routerConfig: AppRouter().router,
       // routeInformationParser: AppRouter().router.routeInformationParser,
