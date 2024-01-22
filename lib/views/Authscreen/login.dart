@@ -124,16 +124,7 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            // CustomButton(
-            //   text: "Log in",
-            //   borderRadius: 19,
-            //   color: Palette.logoColour,
-            //   textColor: Palette.textColorBlack,
-            //   fontSize: 18,
-            //   fontWeight: FontWeight.w600,
-            //   align: TextAlign.center,
-            //   // height: 200,
-            // ),
+           
             CustomButton(
               text: "Log in",
               borderRadius: 19,
