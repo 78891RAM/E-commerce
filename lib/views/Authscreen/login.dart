@@ -4,6 +4,7 @@ import 'package:ecommerce/widgets/customtext.dart';
 import 'package:ecommerce/widgets/passwordfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -124,7 +125,6 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-           
             CustomButton(
               text: "Log in",
               borderRadius: 19,
@@ -134,11 +134,11 @@ class LoginScreen extends StatelessWidget {
               fontSize: 18,
               fontWeight: FontWeight.w600,
               onPressed: () {
+                GoRouter.of(context).go("/signup");
                 // Add your logic here for the button press
                 print("Log in button pressed!");
               },
             ),
-
             const SizedBox(
               height: 20,
             ),

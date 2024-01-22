@@ -81,6 +81,19 @@ class SignUp extends StatelessWidget {
             ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 25),
+              child: TextField(
+                decoration: InputDecoration(
+                  enabledBorder: UnderlineInputBorder(
+                      borderSide:
+                          BorderSide(color: Color.fromARGB(266, 266, 266, 1))),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 34,
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25),
               child: CustomText(
                 text: "Email",
                 fontSize: 16,
@@ -116,6 +129,37 @@ class SignUp extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                RichText(
+                  text: TextSpan(
+                    // style: DefaultTextStyle.of(context).style,
+                    children: [
+                      TextSpan(
+                        text: "By continuing you agree to our ",
+                        style: TextStyle(color: Palette.textColorBlack),
+                      ),
+                      TextSpan(
+                        text: "Terms of Service",
+                        style: TextStyle(color: Palette.logoColour),
+                      ),
+                      TextSpan(
+                        text: " and ",
+                        style: TextStyle(color: Palette.textColorBlack),
+                      ),
+                      TextSpan(
+                        text: "\nPrivacy Policy",
+                        style: TextStyle(color: Palette.logoColour),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 30,
+            ),
             CustomButton(
               text: "Sign Up",
               borderRadius: 19,
@@ -137,13 +181,19 @@ class SignUp extends StatelessWidget {
               children: [
                 Text.rich(TextSpan(
                   // text: ""
-                  text: "By continuing you agree to our",
-                  style: TextStyle(color: Palette.textColorBlack),
+                  text: "Don't have an account? ",
+                  style: TextStyle(
+                      color: Palette.textColorBlack,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14),
                 )),
                 Text.rich(TextSpan(
                   // text: ""
-                  text: "Terms of Service and Privacy Policy",
-                  style: TextStyle(color: Palette.logoColour),
+                  text: "Login ",
+                  style: TextStyle(
+                      color: Palette.logoColour,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14),
                 )),
               ],
             ),

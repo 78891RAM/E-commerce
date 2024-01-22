@@ -1,14 +1,27 @@
 import 'dart:ffi';
 
 import 'package:ecommerce/views/Authscreen/login.dart';
+import 'package:ecommerce/views/Authscreen/sign.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
-  static final GoRouter _router = GoRouter(routes: [
+  final GoRouter router = GoRouter(routes: [
     GoRoute(
+      name: "login",
       path: "/",
-      builder: (context, state) => const LoginScreen(),
-    )
+      pageBuilder: (context, state) => const MaterialPage(child: LoginScreen()),
+    ),
+
+    GoRoute(
+      name: "signup",
+      path: "/signup",
+      pageBuilder: (context, state) => const MaterialPage(child: SignUp()),
+    ),
+    // GoRoute(
+    //   path: "/signup",
+    //   builder: (context, state) => const SignUp(),
+    // ),
   ]);
   // static GoRouter get router =>_router;
 
