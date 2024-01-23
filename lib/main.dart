@@ -2,8 +2,15 @@ import 'package:ecommerce/routes/go_router.dart';
 import 'package:ecommerce/views/otpscreen/location/selectlocation.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:geocoding/geocoding.dart';
 
-void main() {
+import 'cubit/cubit/location_cubit.dart';
+import 'views/otpscreen/location/try.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // await GeocodingPlatform.instance.init();
   runApp(const MyApp());
 }
 
@@ -20,7 +27,14 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // initialRoute:ChooseLocationScreen() ,
-      home: ChooseLocationScreen(),
+      // home: ChooseLocationScreen(),
+      home: BlocProvider(
+        create: (context) =>
+            LocationCubit(), // Create an instance of LocationCubit
+        child: ChooseLocationScreen(),
+      ),
+
+      // home: const MyHomePage(),
 
       // routerConfig: AppRouter().router,
       // routeInformationParser: AppRouter().router.routeInformationParser,
