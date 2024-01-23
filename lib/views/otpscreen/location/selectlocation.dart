@@ -19,43 +19,6 @@ class ChooseLocationScreen extends StatelessWidget {
     'Bajura',
     // ... add more districts
   ];
-  // String _getLocationText(BuildContext context) {
-  //   final locationState = context.watch<LocationCubit>().state;
-
-  //   if (locationState is LocationLoaded) {
-  //     final locationData = locationState.currentLocation;
-  //     return 'Latitude: ${locationData.latitude}\nLongitude: ${locationData.longitude}';
-  //   } else {
-  //     return 'select your Location ';
-  //   }
-//   // }
-
-//   Future<String> _getLocationText(BuildContext context) async {
-//   final locationState = context.watch<LocationCubit>().state;
-
-//   if (locationState is LocationLoaded) {
-//     final locationData = locationState.currentLocation;
-//     final latitude = locationData.latitude;
-//     final longitude = locationData.longitude;
-
-//     // Use geocoding package to get location name from latitude and longitude
-//     try {
-//       List<geocoding.Placemark> placemarks = await geocoding.placemarkFromCoordinates(
-//         latitude ?? 0.0,
-//         longitude ?? 0.0,
-//       );
-
-//       if (placemarks.isNotEmpty) {
-//         geocoding.Placemark placemark = placemarks[0];
-//         return '${placemark.subThoroughfare} ${placemark.thoroughfare}, ${placemark.locality}';
-//       }
-//     } catch (e) {
-//       print('Error geocoding location: $e');
-//     }
-//   }
-
-//   return 'Location not available';
-// }
   Future<String> _getLocationText(BuildContext context) async {
     final locationState = context.watch<LocationCubit>().state;
 
@@ -183,35 +146,7 @@ class ChooseLocationScreen extends StatelessWidget {
                 const SizedBox(
                   height: 30,
                 ),
-                // Row(
-                //   children: [
-                //     Expanded(
-                //       child: TextField(
-                //         decoration: const InputDecoration(
-                //           hintText: "Select your location",
-                //           enabledBorder: UnderlineInputBorder(
-                //             borderSide: BorderSide(color: Colors.black),
-                //           ),
-                //           focusedBorder: UnderlineInputBorder(
-                //             borderSide: BorderSide(color: Colors.blue),
-                //           ),
-                //         ),
-                //         readOnly: true,
-                //         onTap: () {
-                //           // Handle when the text field is tapped
-                //           print("Text field tapped");
-                //         },
-                //       ),
-                //     ),
-                //     IconButton(
-                //       onPressed: () {
-                //         // Handle location button click (e.g., show map or current location)
-                //         print("Location button clicked");
-                //       },
-                //       icon: const Icon(Icons.location_on),
-                //     ),
-                //   ],
-                // ),
+
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: CustomText(
@@ -221,43 +156,6 @@ class ChooseLocationScreen extends StatelessWidget {
                     color: Palette.textBlur,
                   ),
                 ),
-
-                // Row(
-                //   children: [
-                //     Expanded(
-                //       child: Padding(
-                //         padding: const EdgeInsets.all(16.0),
-                //         child: TextField(
-                //           decoration: InputDecoration(
-                //             hintText: "Select your location",
-                //             enabledBorder: const UnderlineInputBorder(
-                //               borderSide: BorderSide(color: Colors.black),
-                //             ),
-                //             focusedBorder: const UnderlineInputBorder(
-                //               borderSide: BorderSide(
-                //                   color: Color.fromRGBO(266, 266, 266, 1.0)),
-                //             ),
-                //             suffixIcon: IconButton(
-                //               onPressed: () {
-                //                 // Handle location button click (e.g., show map or current location)
-                //                 print("Location button clicked");
-                //                 context
-                //                     .read<LocationCubit>()
-                //                     .getCurrentLocation();
-                //               },
-                //               icon: const Icon(Icons.my_location),
-                //             ),
-                //           ),
-                //           readOnly: true,
-                //           onTap: () {
-                //             // Handle when the text field is tapped
-                //             print("Text field tapped");
-                //           },
-                //         ),
-                //       ),
-                //     ),
-                //   ],
-                // ),
 
                 Row(
                   children: [
