@@ -1,12 +1,6 @@
-import 'package:ecommerce/routes/go_router.dart';
-import 'package:ecommerce/views/otpscreen/location/selectlocation.dart';
+import 'package:ecommerce/views/otpscreen/numberverfication.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:geocoding/geocoding.dart';
-
-import 'cubit/cubit/location_cubit.dart';
-import 'views/otpscreen/location/try.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,12 +22,13 @@ class MyApp extends StatelessWidget {
       ),
       // initialRoute:ChooseLocationScreen() ,
       // home: ChooseLocationScreen(),
-      home: BlocProvider(
-        create: (context) =>
-            LocationCubit(), // Create an instance of LocationCubit
-        child: ChooseLocationScreen(),
-      ),
+      // home: BlocProvider(
+      //   create: (context) =>
+      //       LocationCubit(), // Create an instance of LocationCubit
+      //   child: ChooseLocationScreen(),
+      // ),
 
+      home: NumberVerificationScreen(),
       // home: const MyHomePage(),
 
       // routerConfig: AppRouter().router,

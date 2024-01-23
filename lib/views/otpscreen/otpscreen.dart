@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../contants/colorpalete.dart';
 import '../../cubit/Numberverification_cubit.dart';
 
 class OTPVerificationScreen extends StatelessWidget {
@@ -9,7 +10,15 @@ class OTPVerificationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('OTP Verification')),
+      appBar: AppBar(
+        backgroundColor: Palette.backgroundColor,
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back,
+          ),
+          onPressed: () {},
+        ),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
