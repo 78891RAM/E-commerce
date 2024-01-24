@@ -1,6 +1,9 @@
 import 'package:ecommerce/views/otpscreen/numberverfication.dart';
+import 'package:ecommerce/views/otpscreen/otpscreen.dart';
 
 import 'package:flutter/material.dart';
+
+import 'views/home/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,7 +31,7 @@ class MyApp extends StatelessWidget {
       //   child: ChooseLocationScreen(),
       // ),
 
-      home: NumberVerificationScreen(),
+      home: const HomePage(),
       // home: const MyHomePage(),
 
       // routerConfig: AppRouter().router,

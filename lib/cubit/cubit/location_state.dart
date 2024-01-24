@@ -9,7 +9,9 @@ abstract class LocationState extends Equatable {
 
 class LocationInitial extends LocationState {}
 
-class LocationPermissionDenied extends LocationState {}
+class LocationPermissionDenied extends LocationState {
+  
+}
 
 class LocationPermissionGranted extends LocationState {}
 
